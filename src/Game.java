@@ -88,8 +88,7 @@ public class Game
      */
     private void printWelcome()
     {
-        System.out.println();
-        System.out.println("Welcome to the World of Zuul!");
+        System.out.println("\nWelcome to the World of Zuul!");
         System.out.println("World of Zuul is a new, incredibly boring adventure game.");
         System.out.println("Type 'help' if you need help. \n ");
 
@@ -117,9 +116,11 @@ public class Game
         else if (commandWord.equals("go")) {
             goRoom(command);
         }
-        else if (commandWord.equals("investigate")) {
+        else if (commandWord.equals("look")) {
             System.out.println("No");
-            //goRoom(command);
+        }
+        else if (commandWord.equals("eat")) {
+            System.out.println("You have eaten now and you are not hungry any more.");
         }
         else if (commandWord.equals("quit")) {
             wantToQuit = quit(command);
@@ -138,10 +139,9 @@ public class Game
     private void printHelp() 
     {
         System.out.println("You are lost. You are alone. You wander");
-        System.out.println("around at the university.");
-        System.out.println();
+        System.out.println("around at the university.\n");
         System.out.println("Your command words are:");
-        System.out.println("   go quit help investigate");
+        parser.showCommands();
     }
 
     /** 
