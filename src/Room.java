@@ -17,7 +17,7 @@ import java.util.Set;
  */
 public class Room
 {
-    private String description;
+    private String roomDescription;
     private HashMap<String, Room> exits;
 
     /**
@@ -25,9 +25,9 @@ public class Room
  * has no exits. "description" is something like "a
  * kitchen" or "an open courtyard".
  */
-public Room(String description)
+public Room(String roomDescription)
 {
-    this.description = description;
+    this.roomDescription = roomDescription;
     exits = new HashMap<String, Room>();
 }
     /**
@@ -52,9 +52,9 @@ public Room(String description)
      * Return the description of the room (the one that was
      * defined in the constructor).
      */
-    public String getDescription()
+    public String getRoomDescription()
     {
-        return description;
+        return roomDescription;
     }
     /**
      * Return a description of the room’s exits,
@@ -77,6 +77,6 @@ public Room(String description)
      */
     public String getLongDescription()
     {
-        return "You are " + description + ".\n" + getExitString();
+        return "You are " + roomDescription + ".\n" + getExitString();
     }
 }

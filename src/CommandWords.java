@@ -41,7 +41,7 @@ public class CommandWords
     /**
      * Print all valid commands to System.out.
      */
-    public void showAll()
+    public void getCommandList()
     {
         for(String command : validCommands) {
             System.out.print(command + " ");

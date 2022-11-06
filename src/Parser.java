@@ -64,6 +64,6 @@ public class Parser
     }
 
     public void showCommands() {
-        commands.showAll();
+        commands.getCommandList();
     }
 }
